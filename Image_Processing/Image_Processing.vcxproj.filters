@@ -18,6 +18,9 @@
     <ClCompile Include="Color_Space_Conversion.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Histogram_Equalization.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="airplane.tiff">

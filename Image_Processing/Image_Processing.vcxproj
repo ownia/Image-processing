@@ -116,6 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Color_Space_Conversion.cpp" />
+    <ClCompile Include="Histogram_Equalization.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="airplane.tiff" />
