@@ -120,6 +120,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="airplane.tiff" />
+    <Image Include="baboon.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
