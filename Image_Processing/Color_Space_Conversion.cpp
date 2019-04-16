@@ -10,7 +10,7 @@ using namespace cv;
 int main()
 {
 	//select srcImageFile
-	string file = "ExperimentImage/color24/bmp/baboon.bmp";
+	string file = "ExperimentImage/Color24/bmp/baboon.bmp";
 
 	Mat srcImage = imread(file);
 	if (!srcImage.data)
