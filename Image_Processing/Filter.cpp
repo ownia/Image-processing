@@ -54,7 +54,7 @@ int main()
 	addWeighted(s_x2, 0.5, s_y2, 0.5, 0, PrewittImage);
 	//imshow("PrewittImage", PrewittImage);
 
-	//g[i, j] = {{f[i , j] - f[i + 1, j + 1]} ^ 2 + {f[i + 1, j] - f[i, j + 1] ^2}} ^ 0.5
+	//g[i, j] = {{f[i , j] - f[i + 1, j + 1]} ^ 2 + {f[i + 1, j] - f[i, j + 1] ^2}} ^ d0.5
 	Mat RobertsImage;
 	Mat RobertsGray;
 	cvtColor(srcImage, RobertsGray, COLOR_BGR2GRAY);
