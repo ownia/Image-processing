@@ -119,8 +119,10 @@
     <ClCompile Include="Histogram_Equalization.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="airplane.tiff" />
-    <Image Include="baboon.bmp" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Image_Processing.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

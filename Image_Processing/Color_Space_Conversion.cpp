@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include <opencv2/imgproc/types_c.h>
 #include <opencv2/core.hpp>
 #include <opencv2/highgui.hpp>
@@ -10,8 +9,10 @@ using namespace cv;
 
 int main()
 {
-	Mat srcImage = imread("baboon.bmp");
+	//select srcImageFile
+	string file = "ExperimentImage/color24/bmp/baboon.bmp";
 
+	Mat srcImage = imread(file);
 	if (!srcImage.data)
 	{
 		cout << "load failed" << endl;
@@ -26,8 +27,11 @@ int main()
 
 	//RGB2GRAY
 
-	//Mat grayImage;
-	//cvtColor(srcImage, grayImage, COLOR_RGB2GRAY);
+
+	//If set "IMREAD_ANYDEPTH", return 16-bit/32-bit image when the input has the corresponding depth, otherwise convert it to 8-bit.
+	Mat srcImage_24_to_8 = imread(file, IMREAD_ANYDEPTH);
+	imshow("srcImage_24_to_8", srcImage_24_to_8);
+	//cvtColor(srcImage, grayImage, COLOR_BGR2GRAY);
 	//namedWindow("GRAYImage", WINDOW_AUTOSIZE);
 	//imshow("GRAYImage", grayImage);
 
@@ -38,7 +42,6 @@ int main()
 	//imshow("YUV", YUVImage);
 	std::vector<Mat> YUVchannels;
 	split(YUVImage, YUVchannels);
-
 	imshow("YUV-Y", YUVchannels[0]);
 	imshow("YUV-U", YUVchannels[1]);
 	imshow("YUV-V", YUVchannels[2]);
@@ -58,7 +61,6 @@ int main()
 			r = srcImage.at<Vec3b>(i, j)[2];
 
 			in = (b + g + r) / 3;
-
 			int min_val = 0;
 			min_val = std::min(r, std::min(b, g));
 
@@ -91,7 +93,6 @@ int main()
 	//imshow("HSIImage", HSIImage);
 	std::vector<Mat> HSIchannels;
 	split(HSIImage, HSIchannels);
-
 	imshow("HSI-H", HSIchannels[0]);
 	imshow("HSI-S", HSIchannels[1]);
 	imshow("HSI-I", HSIchannels[2]);
@@ -103,7 +104,6 @@ int main()
 	//imshow("HSVImage", HSVImage);
 	std::vector<Mat> HSVchannels;
 	split(HSVImage, HSVchannels);
-
 	imshow("HSV-H", HSVchannels[0]);
 	imshow("HSV-S", HSVchannels[1]);
 	imshow("HSV-V", HSVchannels[2]);
