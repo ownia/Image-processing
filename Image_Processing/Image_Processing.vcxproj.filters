@@ -21,6 +21,9 @@
     <ClCompile Include="Histogram_Equalization.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Filter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">

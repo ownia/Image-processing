@@ -25,16 +25,6 @@ int main()
 
 	imshow("Original", srcImage);
 
-	//RGB2GRAY
-
-
-	//If set "IMREAD_ANYDEPTH", return 16-bit/32-bit image when the input has the corresponding depth, otherwise convert it to 8-bit.
-	Mat srcImage_24_to_8 = imread(file, IMREAD_ANYDEPTH);
-	imshow("srcImage_24_to_8", srcImage_24_to_8);
-	//cvtColor(srcImage, grayImage, COLOR_BGR2GRAY);
-	//namedWindow("GRAYImage", WINDOW_AUTOSIZE);
-	//imshow("GRAYImage", grayImage);
-
 	//RGB2YUV
 
 	Mat YUVImage;
@@ -47,6 +37,15 @@ int main()
 	imshow("YUV-V", YUVchannels[2]);
 	//U: colormap_u = np.array([[[i,255-i,0] for i in range(256)]],dtype=np.uint8)
 	//V: colormap_v = np.array([[[0,255-i,i] for i in range(256)]],dtype=np.uint8)
+
+	//RGB2GRAY
+
+	//If set "IMREAD_ANYDEPTH", return 16-bit/32-bit image when the input has the corresponding depth, otherwise convert it to 8-bit.
+	Mat srcImage_24_to_8 = imread(file, IMREAD_ANYDEPTH);
+	imshow("srcImage_24_to_8", srcImage_24_to_8);
+	//cvtColor(srcImage, grayImage, COLOR_BGR2GRAY);
+	//namedWindow("GRAYImage", WINDOW_AUTOSIZE);
+	//imshow("GRAYImage", grayImage);
 
 	//RGB2HSI
 
