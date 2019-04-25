@@ -8,16 +8,16 @@ using namespace std;
 using namespace cv;
 
 /*https://docs.opencv.org/4.1.0/d6/dc7/group__imgproc__hist.html
- *void cv::calcHist(const Mat * 	images,
- *	int 						nimages,
- *	const int * 				channels,
- *	InputArray 					mask,
- *	OutputArray 				hist,
- *	int 						dims,
- *	const int * 				histSize,
- *	const float ** 				ranges,
- *	bool 						uniform = true,
- *	bool 						accumulate = false
+ *void cv::calcHist(const Mat * 			images,
+ *					int 					nimages,
+ *					const int * 			channels,
+ *					InputArray 				mask,
+ *					OutputArray 			hist,
+ *					int 					dims,
+ *					const int * 			histSize,
+ *					const float ** 			ranges,
+ *					bool 					uniform = true,
+ *					bool 					accumulate = false
  *)
  */
 
